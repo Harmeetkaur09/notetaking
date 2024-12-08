@@ -37,7 +37,7 @@ function App() {
           <Routes>
             <Route path="/" element={
               <>
-                <div className="mb-4 flex gap-2">
+                <div className="mb-4 flex flex-col sm:flex-row gap-2">
                   <input
                     type="text"
                     value={searchQuery}
@@ -45,7 +45,10 @@ function App() {
                     className="flex-grow px-3 py-2 border border-gray-300 rounded-md"
                     placeholder="Search notes by title"
                   />
-                  <Link to="/add-note" className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
+                  <Link
+                    to="/add-note"
+                    className="w-full sm:w-auto px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 text-center"
+                  >
                     Add Note
                   </Link>
                 </div>
@@ -61,3 +64,4 @@ function App() {
 }
 
 export default App;
+
